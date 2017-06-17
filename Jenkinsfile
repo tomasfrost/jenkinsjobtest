@@ -1,15 +1,6 @@
-pipeline {
-  agent any
-  stages {
-    stage('Deploy') {
-      steps {
-        echo 'Hello deploy'
-      }
-    }
-    stage('Build') {
-      steps {
-        echo 'Again...'
-      }
-    }
-  }
+node('theJob') {
+    stage 'Deploy'
+          print 'Hello Deploy!'
+    stage 'Build'
+          print 'Again...'
 }
